@@ -148,7 +148,7 @@ def _FindPossiblyOffsetSeq(ngrams, lengths, preferences, dicts, solutions):
                 continue
             mod_ngrams = ngrams.copy()
             mod_ngrams.remove(ngram)
-            mod_ngrams.add(ngram[c:])
+            mod_ngrams.append(ngram[c:])
 
             _FindEnumeratedSeq(new_word="", next_ngram="",
                                unused_ngrams=mod_ngrams,
